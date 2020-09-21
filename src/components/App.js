@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Editor from  './Editor'
-
+import useLocalStorege from '../hooks/useLocalStorege'
 function App() {
-const [html, setHtml] = useState('')
-const [css, setCss] = useState('')
-const [js, setJs] = useState('')
+const [html, setHtml] = useLocalStorege('html', '')
+const [css, setCss] = useLocalStorege('css', '')
+const [js, setJs] = useLocalStorege('js', '')
 const [srcDoc, setSrcDoc] = useState('')
 
 useEffect(() => {
